@@ -6,7 +6,7 @@ const Shelf = () => {
     const navigate=useNavigate();
     const [hamburger, setHamburger]=useState(false);
     const [books, setBook]=useState([]);
-     const [selectedBook, setSelectedBook] = useState(null);
+    //  const [selectedBook, setSelectedBook] = useState(null);
     useEffect(()=>{
         const fetchBooks=async ()=>{
             try{
@@ -49,7 +49,7 @@ const Shelf = () => {
             </div>:null}
 
             </div>
-            <div className="flex gap-3 md:flex hidden">
+            <div className="gap-3 md:flex hidden">
             <Link to={'/'} className="group">
             <img src={home} className="w-5 h-5 ml-1 group"/>
             <h4 className="font-bold text-[10px] :text-yellow-500 group-hover:text-yellow-500">Home</h4>
@@ -154,7 +154,7 @@ const Shelf = () => {
                     src={book.image}
                     className="h-52"
                     alt={book.title}
-                    onClick={() => setSelectedBook(book)}
+                    
                 />
                 <h1 className="text-sm italic">{book.title}</h1>
 

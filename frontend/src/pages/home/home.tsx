@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import home from '../../assets/home.png'
-import book1 from '../../assets/book1.png'
+
 import profile from '../../../public/profile.png';
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -13,7 +13,7 @@ const Home = () => {
     const [image, setImage]=useState("");
     const [islogged, setIsLogged]=useState(false);
     const [books, setBook]=useState([]);
-    const [selectedBook, setSelectedBook] = useState(null);
+    
     const [areRead, setAreRead]=useState<any>(null);
     const [read, setRead]=useState<any>([]);
     
@@ -100,33 +100,31 @@ const Home = () => {
         fetchBooks();
         latestBook();
     },[])
-    const handleBookClick = (book:any) => {
-        setSelectedBook(book);
-    };
-    const handleChange=async ()=>{
+    
+    // const handleChange=async ()=>{
         
-        try{
-            console.log("My token is ", localStorage.getItem('token'));
+    //     try{
+    //         console.log("My token is ", localStorage.getItem('token'));
           
-            const response = await fetch('https://book-tracking-website-2.onrender.com/auth/user', {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`
-                }
-            });
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const result=await response.json();
-            if(!result){
-                console.log("Something went wrong, Please try again")
-            }
-            localStorage.setItem('email', result.email);
+    //         const response = await fetch('https://book-tracking-website-2.onrender.com/auth/user', {
+    //             headers: {
+    //                 'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //             }
+    //         });
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         const result=await response.json();
+    //         if(!result){
+    //             console.log("Something went wrong, Please try again")
+    //         }
+    //         localStorage.setItem('email', result.email);
            
     
-        }catch(error){
-            console.log(error);
-        }
-    }
+    //     }catch(error){
+    //         console.log(error);
+    //     }
+    // }
     const addBook = async (idd:any) => {
         console.log("sending id of", idd);
         try {
@@ -287,7 +285,7 @@ const Home = () => {
                     src={book.image}
                     className="h-52"
                     alt={book.title}
-                    onClick={() => setSelectedBook(book)}
+                    
                 />
                 <h1 className="text-sm italic">{book.title}</h1>
 
