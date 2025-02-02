@@ -1,0 +1,18 @@
+@import "tailwindcss";
+.mycolor{
+  background-color: #e0faf1;
+}
+.another{
+  background-color: #9fbdb3;
+}
+.footer{
+  background-color: #283646;
+}
+.goal{
+  background-color: #d9d9d9;
+}
+.pacifico {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
