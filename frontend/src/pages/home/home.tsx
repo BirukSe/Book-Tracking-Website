@@ -21,7 +21,7 @@ const Home = () => {
         const fetchProfilePicture=async()=>{
             console.log(localStorage.getItem('token'));
             try{
-                const result=await fetch('http://localhost:3000/auth/profile',{
+                const result=await fetch('https://book-tracking-website-2.onrender.com/auth/profile',{
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }}
@@ -37,7 +37,7 @@ const Home = () => {
         }
         const isthereuserthere=async ()=>{
             try{
-                const result=await fetch('http://localhost:3000/auth/isthere', {
+                const result=await fetch('https://book-tracking-website-2.onrender.com/auth/isthere', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -59,7 +59,7 @@ const Home = () => {
         }
         const fetchBooks=async ()=>{
             try{
-                const result=await fetch('http://localhost:3000/book/show', {
+                const result=await fetch('https://book-tracking-website-2.onrender.com/book/show', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -77,7 +77,7 @@ const Home = () => {
         }
         const latestBook=async ()=>{
             try{
-                const result=await fetch('http://localhost:3000/auth/latest',{
+                const result=await fetch('https://book-tracking-website-2.onrender.com/auth/latest',{
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -108,7 +108,7 @@ const Home = () => {
         try{
             console.log("My token is ", localStorage.getItem('token'));
           
-            const response = await fetch('http://localhost:3000/auth/user', {
+            const response = await fetch('https://book-tracking-website-2.onrender.com/auth/user', {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
@@ -130,7 +130,7 @@ const Home = () => {
     const addBook = async (idd:any) => {
         console.log("sending id of", idd);
         try {
-            const result = await fetch('http://localhost:3000/auth/addbook', {
+            const result = await fetch('https://book-tracking-website-2.onrender.com/auth/addbook', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -224,7 +224,7 @@ const Home = () => {
                             formData.append('file', file);
 
                             try {
-                                const response = await fetch('http://localhost:3000/auth/upload', {
+                                const response = await fetch('https://book-tracking-website-2.onrender.com/auth/upload', {
                                     method: 'POST',
                                     headers: {
                                         'Authorization': `Bearer ${localStorage.getItem('token')}`

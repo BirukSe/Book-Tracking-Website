@@ -11,7 +11,7 @@ const Signup = () => {
     console.log("i am here", email, password)
     try{
       console.log("I am here, wtf is wrogn")
-      const response=await fetch('http://localhost:3000/auth/signup', {
+      const response=await fetch('https://book-tracking-website-2.onrender.com/auth/signup', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

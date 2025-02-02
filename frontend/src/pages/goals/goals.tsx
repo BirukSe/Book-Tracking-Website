@@ -10,7 +10,7 @@ const goals = () => {
     useEffect(()=>{
         const fetchData=async ()=>{
             try{
-                const result=await fetch('http://localhost:3000/auth/latest', {
+                const result=await fetch('https://book-tracking-website-2.onrender.com/auth/latest', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }

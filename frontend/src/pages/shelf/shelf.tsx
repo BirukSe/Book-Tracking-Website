@@ -10,7 +10,7 @@ const Shelf = () => {
     useEffect(()=>{
         const fetchBooks=async ()=>{
             try{
-                const result=await fetch('http://localhost:3000/book/show', {
+                const result=await fetch('https://book-tracking-website-2.onrender.com/book/show', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }

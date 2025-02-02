@@ -19,7 +19,7 @@ const Admin = () => {
     const getAllUsers = async () => {
       console.log("my token admin os", localStorage.getItem("admin"));
       try {
-        const result = await fetch("http://localhost:3000/auth/all-users", {
+        const result = await fetch("https://book-tracking-website-2.onrender.com/auth/all-users", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("admin")}`,
           },
@@ -37,7 +37,7 @@ const Admin = () => {
     const getAllBooks=async ()=>{
       try{
         setLoading(true);
-        const result=await fetch('http://localhost:3000/book/show', {
+        const result=await fetch('https://book-tracking-website-2.onrender.com/book/show', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('admin')}`
           }
@@ -64,7 +64,7 @@ const Admin = () => {
   }, []);
 
   const userEdit = async (_id:any) => {
-    const result = await fetch("http://localhost:3000/auth/edit", {
+    const result = await fetch("https://book-tracking-website-2.onrender.com/auth/edit", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const Admin = () => {
   };
 
   async function deleteUser(_id:any) {
-    const result = await fetch("http://localhost:3000/auth/delete", {
+    const result = await fetch("https://book-tracking-website-2.onrender.com/auth/delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const Admin = () => {
         formdata.append("description", description);
       }
 
-      const result = await fetch("http://localhost:3000/book/upload", {
+      const result = await fetch("https://book-tracking-website-2.onrender.com/book/upload", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("admin")}`,
