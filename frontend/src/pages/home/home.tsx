@@ -191,6 +191,9 @@ const Home = () => {
             <img src="goal.png" className="w-5 h-5 ml-1"/>
             <h4 className="font-bold text-[10px] group-hover:text-yellow-500">Goals</h4>
         </Link>
+        <div className="border-2 border-green-500 rounded-xl px-3 py-1 pl-7 cursor-pointer hover:bg-green-600 w-14 text-sm flex justify-center" onClick={()=>navigate('/login')}>
+                <h1>Login</h1>
+            </div>
         {!islogged?
         <div className="md:flex gap-7 hidden">
             <div className="border-2 border-green-500 rounded-xl px-3 py-1 pl-7 cursor-pointer hover:bg-green-600 w-14 text-sm flex justify-center" onClick={()=>navigate('/login')}>
