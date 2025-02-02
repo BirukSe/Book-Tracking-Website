@@ -7,7 +7,7 @@ const Explore = () => {
     const [hamburger, setHamburger]=useState(false);
     const [search, setSearch] = useState("");
     const [data, setData] = useState<any>([]);
-    const apiKey = import.meta.env.apiKey;
+    const apiKey = 'AIzaSyC4mtYOTrDcPA44GHzr1gYELInpHg-sEKs';
 
   
     const handleClick = async () => {
@@ -66,12 +66,12 @@ const Explore = () => {
 
         </div>
         <div className="pt-7">
-            <h1 className="font-extrabold text-2xl flex justify-center pacifico">Your Book Explorer</h1>
-            <p className="text-[12px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
+            <h1 className="font-extrabold text-4xl flex justify-center pacifico">Your Book Explorer</h1>
+            <p className="text-[18px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
         </div>
         <div className="h-screen w-full mycolor">
       <div className="flex flex-col justify-center items-center gap-7">
-        <h1 className="font-extrabold text-4xl text-green-500 flex justify-center mt-7 text-sm">
+        <h1 className="font-extrabold  text-green-500 flex justify-center mt-7 text-sm">
           Book Search
         </h1>
         <div className="flex gap-3 text-sm">

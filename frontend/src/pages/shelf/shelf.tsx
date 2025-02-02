@@ -30,7 +30,7 @@ const Shelf = () => {
 
     },[])
   return (
-    <div className="min-h-screen w-full mycolor">
+    <div className="min-h-screen w-full mycolor flex flex-col">
          <div className="flex gap-7 pt-3 justify-around">
             <h1 className="font-bold text-xl pl-3 pacifico">Booky</h1>
             <div className="another flex justify-center rounded-xl h-8">
@@ -73,8 +73,8 @@ const Shelf = () => {
 
         </div>
         <div className="pt-7">
-            <h1 className="font-extrabold text-2xl flex justify-center pacifico">Your Book Shelf</h1>
-            <p className="text-[12px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
+            <h1 className="font-extrabold text-4xl flex justify-center pacifico">Your Book Shelf</h1>
+            <p className="text-[18px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
         </div>
         {/* <div>
             <div className="flex justify-around mt-7">
@@ -147,7 +147,7 @@ const Shelf = () => {
 
             </div>
         </div> */}
-        <div className="flex flex-wrap justify-around">
+        <div className="flex flex-wrap justify-around flex-grow">
         {books.map((book:any) => (
             <div key={book._id}>
                 <img
@@ -171,15 +171,14 @@ const Shelf = () => {
         ))}
         </div>
         <footer className="footer h-30 mt-14 flex flex-col justify-center items-center">
-            <h1 className="flex justify-center items-center font-bold text-white">Booky</h1>
-            <div className="flex justify-center gap-3">
-                <h1 className="text-white text-[10px]">About us</h1>
-                <h1 className="text-white text-[10px]">Privacy</h1>
-
-            </div>
-            <hr></hr>
-            <p className="text-white flex justify-center text-[10px]">Copyright Booky Tracker</p>
-        </footer>
+    <h1 className="flex justify-center items-center font-bold text-white">Booky</h1>
+    <div className="flex justify-center gap-3">
+      <h1 className="text-white text-[10px]">About us</h1>
+      <h1 className="text-white text-[10px]">Privacy</h1>
+    </div>
+    <hr />
+    <p className="text-white flex justify-center text-[10px]">Copyright Booky Tracker</p>
+  </footer>
      
       
     </div>

@@ -253,8 +253,8 @@ const Home = () => {
 
         </div>
         <div className="pt-7">
-            <h1 className="font-extrabold text-2xl flex justify-center pacifico">Welcome to Booky Tracker</h1>
-            <p className="text-[12px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
+            <h1 className="font-extrabold text-4xl flex justify-center pacifico">Welcome to Booky Tracker</h1>
+            <p className="text-[18px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
         </div>
         {areRead &&
         <div className="another flex justify-center mt-7 p-1 gap-3">

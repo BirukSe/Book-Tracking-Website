@@ -73,8 +73,8 @@ const goals = () => {
 
         </div>
         <div className="pt-7">
-            <h1 className="font-extrabold text-2xl flex justify-center pacifico">Readig Goals</h1>
-            <p className="text-[12px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
+            <h1 className="font-extrabold text-4xl flex justify-center pacifico">Readig Goals</h1>
+            <p className="text-[18px] flex justify-center">Dive into Your Library, Track Progress, and Explore the World of Books.</p>
         </div>
         <div className="flex goal justify-around mt-7">
           
