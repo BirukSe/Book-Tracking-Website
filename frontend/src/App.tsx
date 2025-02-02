@@ -6,7 +6,7 @@ import Explore from './pages/explore/explore'
 import Goals from './pages/goals/goals.tsx';
 import Login from './pages/Auth/Login/Login.tsx';
 import Signup from './pages/Auth/Signup/Signup.tsx';
-import Profile from './pages/Profile/profile.tsx';
+
 import Admin from './pages/Admin/admin.tsx';
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
     <Route path="/goals" element={<Goals/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
-    <Route path="/profile" element={<Profile/>}/>
+   
     <Route path="/admin" element={<Admin/>}/>
 
    </Routes>
