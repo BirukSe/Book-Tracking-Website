@@ -6,8 +6,9 @@ const Explore = () => {
     const navigate=useNavigate();
     const [hamburger, setHamburger]=useState(false);
     const [search, setSearch] = useState("");
-    const [data, setData] = useState([]);
-    const apiKey = "AIzaSyC4mtYOTrDcPA44GHzr1gYELInpHg-sEKs";
+    const [data, setData] = useState<any>([]);
+    const apiKey = import.meta.env.apiKey;
+
   
     const handleClick = async () => {
       try {
